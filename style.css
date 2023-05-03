@@ -1,0 +1,460 @@
+/*
+Theme Name: Xavor Ninja Theme
+Author: Muhammad Usman Anwar
+Author URI:www.xavor.com
+Description: This theme is developed to demonstrate my WP theme development learnings.
+Version: 1.0.0
+Tags: Xavor, Ninja, Usman
+*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&family=Pacifico&family=Poppins:wght@200;300;400;600&display=swap");
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "PT Serif", serif !important;
+}
+
+.header {
+  width: 85% !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center;
+  gap: 8px;
+  background: #f1f4f8 !important;
+}
+.header .logoimg {
+  height: 110px !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center;
+  gap: 4px;
+}
+.header .logoimg img {
+  height: 100px !important;
+  width: 100px !important;
+  border-radius: 50% !important;
+  border: 1px solid #001d3d !important;
+}
+.header .nav {
+  height: 60px !important;
+  width: 100%;
+  background: #001d3d;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center;
+  gap: 4px;
+}
+.header .nav ul {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center;
+  gap: 4px;
+  gap: 2rem !important;
+  text-transform: uppercase !important;
+}
+.header .nav ul a {
+  font-family: "Montserrat", sans-serif !important;
+  color: #f1f4f8;
+}
+.header .nav ul a:hover {
+  color: #ca8a04 !important;
+}
+.header .nav ul .current_page_item a {
+  color: #ca8a04 !important;
+}
+
+.footer {
+  height: 80px;
+  background-color: #001d3d;
+  width: 85% !important;
+  margin: 0.5px auto !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-evenly;
+  gap: 0;
+}
+.footer .logoimg {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center;
+  gap: 4px;
+}
+.footer .logoimg img {
+  height: 70px !important;
+  width: 70px !important;
+  border-radius: 50% !important;
+  border: 1px solid #001d3d !important;
+}
+.footer .info {
+  color: #f1f4f8;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.maincontainer {
+  width: 85% !important;
+  margin: 1rem auto !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: "" !important;
+  justify-content: center;
+  gap: 8px;
+}
+.maincontainer .seventyside {
+  padding: 8px;
+  border-radius: 4px;
+  width: 70% !important;
+  background-color: #f1f4f8;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 35px 2rem;
+}
+.maincontainer .seventyside .article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.maincontainer .seventyside .article .image img {
+  height: 200px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #000000;
+}
+.maincontainer .seventyside .article .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+.maincontainer .seventyside .article .details .tags {
+  color: #ff1a75;
+  font-size: 15px;
+}
+.maincontainer .seventyside .article .details a {
+  color: #15171a;
+}
+.maincontainer .seventyside .article .details a:hover {
+  color: #ff1a75;
+}
+.maincontainer .seventyside .article .details p {
+  text-align: justify;
+  color: #60757e;
+  font-size: 12px;
+}
+.maincontainer .seventyside .article .details span h5 {
+  display: inline;
+}
+.maincontainer .seventyside .article .details span h6 {
+  color: #15171a;
+  display: inline;
+  font-weight: 500;
+}
+.maincontainer .thirtyside {
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #e1e8f1;
+  width: 30% !important;
+}
+.maincontainer .thirtyside .wp-calendar-table {
+  background-color: #f1f4f8 !important;
+  color: #f1f4f8 !important;
+}
+.maincontainer .thirtyside .wp-calendar-table caption {
+  padding: 8px 0;
+  text-transform: uppercase !important;
+  letter-spacing: 4px;
+  color: #f1f4f8;
+  background-color: #001d3d !important;
+}
+.maincontainer .thirtyside .wp-calendar-table thead tr {
+  color: #001d3d !important;
+}
+.maincontainer .thirtyside .wp-calendar-table tbody td {
+  color: #001d3d !important;
+  padding: 8px 0 !important;
+}
+.maincontainer .thirtyside .wp-calendar-table tbody td a {
+  text-decoration: none !important;
+  color: #001d3d !important;
+}
+.maincontainer .thirtyside .cat-list {
+  text-align: center !important;
+  padding: 8px 0 !important;
+  background-color: #001d3d !important;
+  color: #f1f4f8;
+  margin-bottom: 8px;
+  text-transform: uppercase !important;
+}
+.maincontainer .thirtyside .widget_categories {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center;
+  gap: 1rem;
+}
+.maincontainer .thirtyside .widget_categories a {
+  color: #001d3d !important;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold !important;
+}
+.maincontainer .thirtyside .widget_categories a:hover {
+  color: #ca8a04 !important;
+}
+
+.pagination-links {
+  width: 85% !important;
+  margin: 12px auto !important;
+}
+.pagination-links .next,
+.pagination-links .prev {
+  background-color: #ca8a04;
+  color: #f1f4f8;
+  padding: 8px 12px !important;
+}
+.pagination-links .page-numbers {
+  background-color: #ca8a04;
+  color: #f1f4f8;
+  padding: 8px 12px !important;
+}
+.pagination-links .current {
+  padding: 8px 12px !important;
+  background-color: #001d3d;
+  color: #f1f4f8;
+}
+
+.header-image-container {
+  width: 85% !important;
+  margin: 12px auto !important;
+}
+.header-image-container img {
+  width: 100%;
+  height: 200px;
+  border-radius: 4px;
+}
+
+.wp-calendar-nav-prev {
+  display: none !important;
+}
+
+.hero-section {
+  padding: 8px;
+  border-radius: 5px;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: "" !important;
+  justify-content: space-between;
+  gap: 3rem;
+  width: 85% !important;
+  margin: 12px auto !important;
+  background: #e1e8f1;
+}
+.hero-section .image img {
+  height: 200px;
+  width: 100%;
+  border-radius: 4px;
+}
+.hero-section .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.hero-section .details .tags {
+  color: #ff1a75;
+  font-size: 18px;
+}
+.hero-section .details a {
+  color: #15171a;
+}
+.hero-section .details a:hover {
+  color: #ff1a75;
+}
+.hero-section .details p {
+  text-align: justify;
+  color: #60757e;
+  line-height: 1.75;
+}
+.hero-section .details span h5 {
+  display: inline;
+  color: #15171a;
+}
+.hero-section .details span h6 {
+  color: #60757e;
+  display: inline;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.acf-title h1 {
+  text-align: center;
+  margin: 12px 0;
+}
+
+.home-hero-section {
+  padding: 8px;
+  border-radius: 5px;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: "" !important;
+  justify-content: space-between;
+  gap: 3rem;
+  width: 85% !important;
+  margin: 12px auto !important;
+}
+.home-hero-section .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.home-hero-section .details p {
+  text-align: justify;
+  color: #191a1d;
+  line-height: 1.5;
+}
+
+.homepage-posts {
+  width: 85% !important;
+  margin: 1rem auto;
+  display: flex;
+  gap: 8px;
+}
+.homepage-posts .side-one {
+  width: 40% !important;
+  margin: 12px auto !important;
+}
+.homepage-posts .side-one h3 {
+  background-color: #001d3d;
+  color: #f1f4f8;
+  padding: 12px 4px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 1.75px;
+}
+.homepage-posts .side-one .articles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin: 8px 0 !important;
+  padding: 8px;
+  background-color: #f1f4f8;
+}
+.homepage-posts .side-one .articles .image img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+.homepage-posts .side-one .articles .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+.homepage-posts .side-one .articles .details a {
+  text-align: center;
+  color: #15171a;
+}
+.homepage-posts .side-one .articles .details a:hover {
+  color: #ff1a75;
+}
+.homepage-posts .side-one .articles .details p {
+  text-align: justify;
+  color: #15171a;
+  font-size: 12px;
+}
+
+.services {
+  width: 85%;
+  background: #ca8a04;
+  border-radius: 4px;
+  margin: 1rem auto;
+}
+.services .our-services {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.services .our-services .heading h1 {
+  text-align: center;
+  color: #f7fbff;
+  font-weight: 600;
+}
+.services .our-services .services-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 35px 1rem;
+}
+.services .our-services .services-section .services-articles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin: 8px 0 !important;
+  padding: 8px;
+}
+.services .our-services .services-section .services-articles .image img {
+  height: 200px;
+  width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+.services .our-services .services-section .services-articles .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+.services .our-services .services-section .services-articles .details a {
+  color: #f1f4f8;
+}
+.services .our-services .services-section .services-articles .details a:hover {
+  color: #001d3d;
+}
+.services .our-services .services-section .services-articles .details p {
+  text-align: justify;
+  color: #f1f4f8;
+  font-size: 12px;
+}
+
+.container-404 {
+  width: 85% !important;
+  margin: 12px auto !important;
+  background-color: #f1f4f8;
+  height: 57vh;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center;
+  gap: "";
+}/*# sourceMappingURL=style.css.map */

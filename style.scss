@@ -1,0 +1,459 @@
+/*
+Theme Name: Xavor Ninja Theme
+Author: Muhammad Usman Anwar
+Author URI:www.xavor.com
+Description: This theme is developed to demonstrate my WP theme development learnings.
+Version: 1.0.0
+Tags: Xavor, Ninja, Usman
+*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&family=Pacifico&family=Poppins:wght@200;300;400;600&display=swap");
+//Sass Variables
+$poppinsFont: "Poppins", sans-serif;
+$montserratFont: "Montserrat", sans-serif;
+$pacificoFont: "Pacifico", cursive;
+$ptSerifFont: "PT Serif", serif;
+$baseYellowColor: #ca8a04;
+$baseDarkBlueColor: #001d3d;
+$baseFontColor: #f1f4f8;
+$baseFontDarkColor: #e1e8f1;
+//Typography
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $montserratFont;
+  margin-top: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: $ptSerifFont !important;
+}
+
+//Mixins
+@mixin displayFlex($direction, $align, $justify, $gap: 4px) {
+  display: flex !important;
+  flex-direction: $direction !important;
+  align-items: $align !important;
+  justify-content: $justify;
+  gap: $gap;
+}
+//Nargin Auto Mixin
+@mixin centerAndWidth($w, $mtb) {
+  width: $w !important;
+  margin: $mtb auto !important;
+}
+@mixin logoimage($h: 100px, $w: 100px) {
+  height: $h !important;
+  width: $w !important;
+  border-radius: 50% !important;
+  border: 1px solid $baseDarkBlueColor !important;
+}
+//Header Styles
+.header {
+  @include centerAndWidth(85%, 0);
+  @include displayFlex(column, center, center, 8px);
+  background: $baseFontColor !important;
+  .logoimg {
+    height: 110px !important;
+    @include displayFlex(row, center, center);
+    img {
+      @include logoimage();
+    }
+  }
+
+  .nav {
+    height: 60px !important;
+    width: 100%;
+    background: $baseDarkBlueColor;
+    @include displayFlex(row, center, center);
+
+    ul {
+      @include displayFlex(row, center, center);
+      gap: 2rem !important;
+      text-transform: uppercase !important;
+      a {
+        font-family: $montserratFont !important;
+        color: $baseFontColor;
+        &:hover {
+          color: $baseYellowColor !important;
+        }
+      }
+      .current_page_item {
+        a {
+          color: $baseYellowColor !important;
+        }
+      }
+    }
+  }
+}
+//Footer Styles
+.footer {
+  height: 80px;
+  background-color: $baseDarkBlueColor;
+  @include centerAndWidth(85%, 0.5px);
+  @include displayFlex(row, center, space-evenly, 0);
+  .logoimg {
+    @include displayFlex(row, center, center);
+    img {
+      @include logoimage(70px, 70px);
+    }
+  }
+  .info {
+    color: $baseFontColor;
+    font-family: $montserratFont !important;
+  }
+}
+
+//Index Page Styles
+.maincontainer {
+  @include centerAndWidth(85%, 1rem);
+  @include displayFlex(row, "", center, 8px);
+  .seventyside {
+    padding: 8px;
+    border-radius: 4px;
+    width: 70% !important;
+    background-color: $baseFontColor;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 35px 2rem;
+    .article {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      .image {
+        img {
+          height: 200px;
+          width: 100%;
+          border-radius: 5px;
+          border: 1px solid #000000;
+        }
+      }
+      .details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+        .tags {
+          color: #ff1a75;
+          font-size: 15px;
+        }
+        a {
+          color: #15171a;
+          &:hover {
+            color: #ff1a75;
+          }
+        }
+        p {
+          text-align: justify;
+          color: #60757e;
+          font-size: 12px;
+        }
+        span {
+          h5 {
+            display: inline;
+          }
+          h6 {
+            color: #15171a;
+            display: inline;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+  .thirtyside {
+    padding: 8px;
+    border-radius: 4px;
+    background-color: $baseFontDarkColor;
+    width: 30% !important;
+    .wp-calendar-table {
+      background-color: $baseFontColor !important;
+      color: $baseFontColor !important;
+      caption {
+        padding: 8px 0;
+        text-transform: uppercase !important;
+        letter-spacing: 4px;
+        color: $baseFontColor;
+        background-color: $baseDarkBlueColor !important;
+      }
+      thead {
+        tr {
+          color: $baseDarkBlueColor !important;
+        }
+      }
+      tbody {
+        td {
+          color: $baseDarkBlueColor !important;
+          a {
+            text-decoration: none !important;
+            color: $baseDarkBlueColor !important;
+          }
+          padding: 8px 0 !important;
+        }
+      }
+    }
+    .cat-list {
+      text-align: center !important;
+      padding: 8px 0 !important;
+      background-color: $baseDarkBlueColor !important;
+      color: $baseFontColor;
+      margin-bottom: 8px;
+      text-transform: uppercase !important;
+    }
+    .widget_categories {
+      @include displayFlex(column, center, center, 1rem);
+      a {
+        color: $baseDarkBlueColor !important;
+        font-family: $montserratFont;
+        font-weight: bold !important;
+        &:hover {
+          color: $baseYellowColor !important;
+        }
+      }
+    }
+  }
+}
+//Pagination Styles
+.pagination-links {
+  @include centerAndWidth(85%, 12px);
+  .next,
+  .prev {
+    background-color: $baseYellowColor;
+    color: $baseFontColor;
+    padding: 8px 12px !important;
+  }
+
+  .page-numbers {
+    background-color: $baseYellowColor;
+    color: $baseFontColor;
+    padding: 8px 12px !important;
+  }
+  .current {
+    padding: 8px 12px !important;
+    background-color: $baseDarkBlueColor;
+    color: $baseFontColor;
+  }
+}
+//Header Image Container
+.header-image-container {
+  @include centerAndWidth(85%, 12px);
+  img {
+    width: 100%;
+    height: 200px;
+    border-radius: 4px;
+  }
+}
+
+//WP Calender Style
+.wp-calendar-nav-prev {
+  display: none !important;
+}
+//Single Post Design
+.hero-section {
+  padding: 8px;
+  border-radius: 5px;
+  @include displayFlex(column, "", space-between, 3rem);
+  @include centerAndWidth(85%, 12px);
+  background: $baseFontDarkColor;
+  .image {
+    img {
+      height: 200px;
+      width: 100%;
+      border-radius: 4px;
+    }
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    .tags {
+      color: #ff1a75;
+      font-size: 18px;
+    }
+    a {
+      color: #15171a;
+      &:hover {
+        color: #ff1a75;
+      }
+    }
+    p {
+      text-align: justify;
+      color: #60757e;
+      line-height: 1.75;
+    }
+    span {
+      h5 {
+        display: inline;
+        color: #15171a;
+      }
+      h6 {
+        color: #60757e;
+        display: inline;
+        font-size: 13px;
+
+        font-weight: 500;
+      }
+    }
+  }
+}
+.acf-title {
+  h1 {
+    text-align: center;
+    margin: 12px 0;
+  }
+}
+
+.home-hero-section {
+  padding: 8px;
+  border-radius: 5px;
+  @include displayFlex(column, "", space-between, 3rem);
+  @include centerAndWidth(85%, 12px);
+  .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+
+    p {
+      text-align: justify;
+      color: #191a1d;
+      line-height: 1.5;
+    }
+  }
+}
+.homepage-posts {
+  width: 85% !important;
+  margin: 1rem auto;
+  display: flex;
+  gap: 8px;
+  .side-one {
+    width: 40% !important;
+    margin: 12px auto !important;
+    h3 {
+      background-color: $baseDarkBlueColor;
+      color: $baseFontColor;
+      padding: 12px 4px;
+      border-radius: 2px;
+      text-transform: uppercase;
+      letter-spacing: 1.75px;
+    }
+    .articles {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      margin: 8px 0 !important;
+      padding: 8px;
+      background-color: $baseFontColor;
+      //   border: 1px solid black;
+      .image {
+        img {
+          height: 100px;
+          width: 100px;
+          border-radius: 50%;
+          border: 1px solid black;
+        }
+      }
+      .details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+
+        a {
+          text-align: center;
+          color: #15171a;
+          &:hover {
+            color: #ff1a75;
+          }
+        }
+        p {
+          text-align: justify;
+          color: #15171a;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+//Services Section Styles
+.services {
+  width: 85%;
+  background: $baseYellowColor;
+  border-radius: 4px;
+  margin: 1rem auto;
+  .our-services {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .heading {
+      h1 {
+        text-align: center;
+        color: #f7fbff;
+        font-weight: 600;
+      }
+    }
+    .services-section {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 35px 1rem;
+
+      .services-articles {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        margin: 8px 0 !important;
+        padding: 8px;
+        //   border: 1px solid black;
+        .image {
+          img {
+            height: 200px;
+            width: 300px;
+            object-fit: cover;
+            border-radius: 4px;
+          }
+        }
+        .details {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 8px;
+
+          a {
+            color: $baseFontColor;
+            &:hover {
+              color: $baseDarkBlueColor;
+            }
+          }
+          p {
+            text-align: justify;
+            color: $baseFontColor;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+.container-404 {
+  @include centerAndWidth(85%, 12px);
+  background-color: $baseFontColor;
+  height: 57vh;
+  @include displayFlex(row, center, center, "");
+}
